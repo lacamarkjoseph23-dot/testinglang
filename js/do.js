@@ -154,9 +154,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         snapshot.forEach(child => {
             const h = child.val();
-            if (!h || h.do === undefined || !h.timestamp) return;
+            if (!h || h.do === undefined || !h.time) return;
 
-            const t = new Date(h.timestamp);
+            const t = new Date(h.time);
             if (t >= startOfDay) {
                 labels.push(
                     t.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })
