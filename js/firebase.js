@@ -3,13 +3,7 @@
 console.log("firebase.js loading...");
 
 var firebaseConfig = {
-  apiKey: "AIzaSyBLahiL7WFpeDmoWV3ZlRCg288Shwxw_EE",
-  authDomain: "prototypefishda.firebaseapp.com",
-  databaseURL: "https://prototypefishda-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "prototypefishda",
-  storageBucket: "prototypefishda.appspot.com",
-  messagingSenderId: "452322894750",
-  appId: "1:452322894750:web:4d10904fb4b320c261ac8f"
+xxxxxxxx
 };
 
 // Check if Firebase SDK is loaded
@@ -35,3 +29,4 @@ try {
 } catch (error) {
   console.error("Error creating database reference:", error);
 }
+
