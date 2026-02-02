@@ -89,10 +89,10 @@ document.addEventListener("DOMContentLoaded", () => {
         if (snap.exists()) {
             snap.forEach(child => {
                 const v = child.val();
-                if (v.ph !== undefined && v.timestamp) {
+                if (v.ph !== undefined && v.time) {
                     historyData.push({
                         value: v.ph,
-                        timestamp: v.timestamp
+                        time: v.time
                     });
                 }
             });
@@ -101,11 +101,11 @@ document.addEventListener("DOMContentLoaded", () => {
         const today = new Date().toDateString();
 
         historyData = historyData
-            .filter(d => new Date(d.timestamp).toDateString() === today)
-            .sort((a, b) => a.timestamp - b.timestamp);
+            .filter(d => new Date(d.time).toDateString() === today)
+            .sort((a, b) => a.time - b.time);
 
         phChart.data.labels = historyData.map(d =>
-            new Date(d.timestamp).toLocaleTimeString([], {
+            new Date(d.time).toLocaleTimeString([], {
                 hour: "2-digit",
                 minute: "2-digit"
             })
